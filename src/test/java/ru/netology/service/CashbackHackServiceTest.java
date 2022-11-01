@@ -9,7 +9,7 @@ public class CashbackHackServiceTest {
     CashbackHackService cashbackHackService = new CashbackHackService();
 
     //покупка в пределах лимита
-    @Test
+    @org.testng.annotations.Test
     public void showHowMuchToSpendIfThePurchaseIsLessThanTheLimit() {
 
         int actual = cashbackHackService.remain(500);
@@ -19,7 +19,7 @@ public class CashbackHackServiceTest {
     }
 
     //покупка больше лимита
-    @Test
+    @org.testng.annotations.Test
     public void showHowMuchToSpendIfThePurchaseIsOverThanTheLimit() {
 
         int actual = cashbackHackService.remain(1500);
@@ -29,7 +29,7 @@ public class CashbackHackServiceTest {
     }
 
     //покупка равна лимиту
-    @Test
+    @org.testng.annotations.Test
     public void showHowMuchToSpendIfThePurchaseIsEqualToTheLimit() {
 
         int actual = cashbackHackService.remain(1000);
@@ -39,7 +39,7 @@ public class CashbackHackServiceTest {
     }
 
     //верхнее граничные значения - меньше
-    @Test
+    @org.testng.annotations.Test
     public void upperLimitValueLessThanLimit() {
 
         int actual = cashbackHackService.remain(999);
@@ -49,7 +49,7 @@ public class CashbackHackServiceTest {
     }
 
     //верхнее граничные значения - больше
-    @Test
+    @org.testng.annotations.Test
     public void upperLimitValueGreaterThanLimit() {
 
         int actual = cashbackHackService.remain(1001);
@@ -59,7 +59,7 @@ public class CashbackHackServiceTest {
     }
 
     //покупка ноль
-    @Test
+    @org.testng.annotations.Test
     public void ifPurchaseEqualNull() {
 
         int actual = cashbackHackService.remain(0);
@@ -69,7 +69,7 @@ public class CashbackHackServiceTest {
     }
 
     //покупка отрицательная
-    @Test
+    @org.testng.annotations.Test
     public void ifPurchaseNegative() {
 
         int actual = cashbackHackService.remain(-1);
@@ -79,7 +79,7 @@ public class CashbackHackServiceTest {
     }
 
     //нижнее граничное значение
-    @Test
+    @org.testng.annotations.Test
     public void bottonLimitValueGreaterThanLimit() {
 
         int actual = cashbackHackService.remain(1);
